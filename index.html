@@ -1,37 +1,300 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>俺のHP</title>
-</head>
-<body>
+
+  <title>レイプの神様 | 公式ホームページ</title>
+  <meta name="description" content="レイプの神様の個人ホームページです。">
+
   <style>
-body{
-    background:hsl(0, 100%, 99%);
-}
-</style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      background: #f4f6f9;
+      color: #172b4d;
+      line-height: 1.8;
+    }
+
+    header {
+      background: white;
+      padding: 15px 4%;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+      width: 300px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .header-title {
+      border-left: 3px solid #142b49;
+      padding-left: 25px;
+    }
+
+    .header-title h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #142b49;
+    }
+
+    .header-title p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    nav {
+      background: #142f59;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 25px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #dcecff, #8db9e8);
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin: 0;
+      color: #142b49;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .contents {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 25px;
+    }
+
+    section {
+      background: white;
+      border: 1px solid #cbd8e8;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    section h2 {
+      background: #142f59;
+      color: white;
+      padding: 12px 20px;
+      margin: 0;
+      font-size: 21px;
+    }
+
+    .section-body {
+      padding: 15px 22px;
+    }
+
+    .news {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .date {
+      color: #315d91;
+      display: inline-block;
+      width: 120px;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th, td {
+      padding: 13px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #e8f0fa;
+      width: 35%;
+    }
+
+    .about {
+      background: #eaf2fc;
+      padding: 20px;
+      border-left: 6px solid #173d70;
+    }
+
+    footer {
+      background: #142f59;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header img {
+        max-width: 100%;
+      }
+
+      .header-title {
+        border-left: none;
+        padding-left: 0;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+
+      .contents {
+        grid-template-columns: 1fr;
+      }
+
+      .date {
+        width: auto;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
   <img src="images/icon.JPG" alt="アイコン" width="300">
-  <h1>レイプの神様</h1>
-   
-  <h3>お知らせ</h3>
-   <ul>
-    <li>2026/7/15/ホームページの作成</li>
-    <li>バイト先の後輩に振られた</li>
-    <li>恋する顔はとても綺麗で残酷だった</li>
-    <li>もうどうでもよくなってきたぜ◎</li>
-    <li>現在高校を休学中</li>
-   </ul>
-   
-  <h3>一般情報</h3>
-  <ul>
-    <li>所在地：神奈川県横浜市瀬谷区</li>
-    <li>生誕：2009年5月12日</li>
-    <li>座右の銘：一石二鳥</li>
-    <li>使用言語：HTML、CSS、JavaScript</li>
-  </ul>
-   
+
+  <div class="header-title">
+    <h1>レイプの神様</h1>
+    <p>公式ホームページ</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#home">ホーム</a>
+  <a href="#news">お知らせ</a>
+  <a href="#profile">プロフィール</a>
+  <a href="#about">当サイトについて</a>
+</nav>
+
+<div class="hero" id="home">
+  <h2>レイプの神様</h2>
+  <p>— この世界に、少しの面白さを —</p>
+</div>
+
+<main>
+
+  <div class="contents">
+
+    <section id="news">
+      <h2>最新のお知らせ</h2>
+
+      <div class="section-body">
+        <ul class="news">
+          <li>
+            <span class="date">2026.07.15</span>
+            ホームページの作成
+          </li>
+          <li>
+            <span class="date">未定</span>
+            バイト先の後輩に振られた
+          </li>
+          <li>
+            <span class="date">未定</span>
+            恋する顔はとても綺麗で残酷だった
+          </li>
+          <li>
+            <span class="date">未定</span>
+            もうどうでもよくなってきたぜ◎
+          </li>
+          <li>
+            <span class="date">現在</span>
+            高校を休学中
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="profile">
+      <h2>一般情報</h2>
+
+      <table>
+        <tr>
+          <th>所在地</th>
+          <td>神奈川県横浜市</td>
+        </tr>
+        <tr>
+          <th>生誕</th>
+          <td>非公開</td>
+        </tr>
+        <tr>
+          <th>座右の銘</th>
+          <td>一石二鳥</td>
+        </tr>
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / JavaScript</td>
+        </tr>
+      </table>
+    </section>
+
+  </div>
+
+  <section id="about">
+    <div class="section-body about">
+      <h2>当サイトについて</h2>
+      <p>
+        このサイトは、レイプの神様が運営する個人ホームページです。
+        日々の出来事や好きなものについて発信していきます。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>レイプの神様 | Official Personal Website</p>
+  <p>© 2026 Personal Website. All Rights Reserved.</p>
+</footer>
 
 </body>
-<script></script>
 </html>
