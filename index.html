@@ -4,112 +4,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>レイプの神様｜公式ホームページ</title>
+
+  <title>レイプの神様 | 公式ホームページ</title>
+  <meta name="description" content="レイプの神様の個人ホームページです。">
 
   <style>
-    /* ページ全体 */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: "Yu Gothic", "Meiryo", sans-serif;
-      background: #f3f5f8;
-      color: #222;
+      font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+      background: #f4f6f9;
+      color: #172b4d;
       line-height: 1.8;
     }
 
     /* ヘッダー */
     header {
       background: white;
-      border-bottom: 4px solid #17365d;
-      padding: 25px 5%;
+      padding: 15px 4%;
       display: flex;
       align-items: center;
       gap: 25px;
+      border-bottom: 1px solid #ddd;
     }
 
-    .header-title {
-      flex: 1;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #17365d;
-      font-size: 30px;
-    }
-
-    header p {
-      margin: 5px 0 0;
-      color: #555;
-      font-size: 15px;
-    }
-
-    /* タイトル横のアイコン */
-    .site-icon {
-      width: 90px;
-      height: 90px;
+    header img {
+      width: 110px;
+      height: 110px;
       object-fit: contain;
       flex-shrink: 0;
     }
 
+    .header-title {
+      border-left: 3px solid #142b49;
+      padding-left: 25px;
+    }
+
+    .header-title h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #142b49;
+    }
+
+    .header-title p {
+      margin: 0;
+      font-size: 15px;
+    }
+
     /* ナビゲーション */
     nav {
-      background: #17365d;
-      padding: 12px 5%;
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
+      background: #142f59;
+      padding: 15px;
+      text-align: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 25px;
+      font-size: 15px;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    /* メインコンテンツ */
+    /* メインビジュアル */
+    .hero {
+      background: linear-gradient(120deg, #dcecff, #8db9e8);
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin: 0;
+      color: #142b49;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* コンテンツ */
     main {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 35px auto;
       padding: 0 20px;
     }
 
+    .contents {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 25px;
+    }
+
     section {
       background: white;
-      padding: 25px 30px;
-      margin-bottom: 25px;
-      border: 1px solid #ddd;
+      border: 1px solid #cbd8e8;
       border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 25px;
     }
 
     section h2 {
-      color: #17365d;
-      border-left: 5px solid #17365d;
-      padding-left: 12px;
-      margin-top: 0;
+      background: #142f59;
+      color: white;
+      padding: 12px 20px;
+      margin: 0;
+      font-size: 21px;
+    }
+
+    .section-body {
+      padding: 15px 22px;
     }
 
     /* お知らせ */
-    .news-item {
-      border-bottom: 1px solid #ddd;
-      padding: 12px 0;
+    .news {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .news-item:last-child {
-      border-bottom: none;
+    .news li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
     }
 
     .date {
-      color: #666;
-      margin-right: 15px;
+      color: #315d91;
+      display: inline-block;
+      width: 120px;
       font-size: 14px;
+    }
+
+    /* プロフィール */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th, td {
+      padding: 13px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #e8f0fa;
+      width: 35%;
+    }
+
+    /* サイトについて */
+    .about {
+      background: #eaf2fc;
+      padding: 20px;
+      border-left: 6px solid #173d70;
+    }
+
+    .about h2 {
+      background: transparent;
+      color: #173d70;
+      padding: 0;
     }
 
     /* フッター */
     footer {
-      background: #17365d;
+      background: #142f59;
       color: white;
       text-align: center;
       padding: 25px;
@@ -117,31 +182,34 @@
     }
 
     /* スマートフォン対応 */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       header {
-        padding: 20px;
-        gap: 12px;
+        flex-direction: column;
+        text-align: center;
       }
 
-      header h1 {
-        font-size: 22px;
+      header img {
+        width: 110px;
+        height: 110px;
       }
 
-      header p {
-        font-size: 12px;
+      .header-title {
+        border-left: none;
+        padding-left: 0;
       }
 
-      .site-icon {
-        width: 65px;
-        height: 65px;
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
       }
 
-      nav {
-        gap: 15px;
+      .contents {
+        grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 20px;
+      .date {
+        width: auto;
+        margin-right: 10px;
       }
     }
   </style>
@@ -149,69 +217,124 @@
 
 <body>
 
-  <!-- ヘッダー -->
-  <header>
-    <div class="header-title">
-      <h1>レイプの神様</h1>
-      <p>— この世界に、少しの面白さを —</p>
-    </div>
+<!-- ヘッダー -->
+<header>
+  <img src="images/combined_logo.jpg"
+       alt="サイトロゴ"
+       width="110"
+       height="110">
 
-    <img
-      src="images/icon.JPG"
-      alt="サイトアイコン"
-      class="site-icon"
-    >
-  </header>
+  <div class="header-title">
+    <h1>レイプの神様</h1>
+    <p>公式ホームページ</p>
+  </div>
+</header>
 
-  <!-- ナビゲーション -->
-  <nav>
-    <a href="#home">ホーム</a>
-    <a href="#news">お知らせ</a>
-    <a href="#about">当サイトについて</a>
-    <a href="#profile">プロフィール</a>
-  </nav>
+<!-- メニュー -->
+<nav>
+  <a href="#home">ホーム</a>
+  <a href="#news">お知らせ</a>
+  <a href="#profile">プロフィール</a>
+  <a href="#about">当サイトについて</a>
+</nav>
 
-  <!-- メイン -->
-  <main>
+<!-- トップ -->
+<div class="hero" id="home">
+  <h2>レイプの神様</h2>
+  <p>— この世界に、少しの面白さを —</p>
+</div>
 
-    <section id="home">
-      <h2>ホーム</h2>
-      <p>
-        公式ホームページへようこそ。
-        当サイトでは、お知らせや活動情報などを掲載しています。
-      </p>
-    </section>
+<main>
 
+  <div class="contents">
+
+    <!-- お知らせ -->
     <section id="news">
-      <h2>お知らせ</h2>
+      <h2>最新のお知らせ</h2>
 
-      <div class="news-item">
-        <span class="date">2026年11月12日</span>
-        <span>ホームページを更新しました。</span>
+      <div class="section-body">
+        <ul class="news">
+          <li>
+            <span class="date">2026.07.15</span>
+            ホームページの作成
+          </li>
+
+          <li>
+            <span class="date">未定</span>
+            バイト先の後輩に振られた
+          </li>
+
+          <li>
+            <span class="date">未定</span>
+            恋する顔はとても綺麗で残酷だった
+          </li>
+
+          <li>
+            <span class="date">未定</span>
+            もうどうでもよくなってきたぜ◎
+          </li>
+
+          <li>
+            <span class="date">現在</span>
+            高校を休学中
+          </li>
+        </ul>
       </div>
-
     </section>
 
-    <section id="about">
-      <h2>当サイトについて</h2>
-      <p>
-        このサイトは、個人で運営しているホームページです。
-        サイトに関する情報や活動内容を掲載しています。
-      </p>
-    </section>
-
+    <!-- プロフィール -->
     <section id="profile">
-      <h2>プロフィール</h2>
-      <p>運営者：非公開</p>
-      <p>所在地：非公開</p>
+      <h2>一般情報</h2>
+
+      <table>
+        <tr>
+          <th>所在地</th>
+          <td>神奈川県横浜市</td>
+        </tr>
+
+        <tr>
+          <th>生誕</th>
+          <td>非公開</td>
+        </tr>
+
+        <tr>
+          <th>座右の銘</th>
+          <td>一石二鳥</td>
+        </tr>
+
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / JavaScript</td>
+        </tr>
+      </table>
     </section>
 
-  </main>
+  </div>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2026 公式ホームページ</p>
-  </footer>
+  <!-- サイトについて -->
+  <section id="about">
+    <div class="section-body about">
+      <h2>当サイトについて</h2>
+
+      <p>
+        このサイトは、レイプの神様が運営する個人ホームページです。
+        日々の出来事や好きなものについて発信していきます。
+      </p>
+
+      <p>
+        ※当サイトは行政機関・公共団体とは関係ありません。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <p>レイプの神様 | Official Personal Website</p>
+  <p>© 2026 Personal Website. All Rights Reserved.</p>
+  <p>本サイトは個人運営です。</p>
+</footer>
 
 </body>
 </html>
