@@ -15,12 +15,13 @@
 
     body {
       margin: 0;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
       background: #f4f6f9;
       color: #172b4d;
       line-height: 1.8;
     }
 
+    /* ヘッダー */
     header {
       background: white;
       padding: 15px 4%;
@@ -31,9 +32,10 @@
     }
 
     header img {
-      width: 300px;
-      height: auto;
+      width: 110px;
+      height: 110px;
       object-fit: contain;
+      flex-shrink: 0;
     }
 
     .header-title {
@@ -52,6 +54,7 @@
       font-size: 15px;
     }
 
+    /* ナビゲーション */
     nav {
       background: #142f59;
       padding: 15px;
@@ -69,6 +72,7 @@
       text-decoration: underline;
     }
 
+    /* メインビジュアル */
     .hero {
       background: linear-gradient(120deg, #dcecff, #8db9e8);
       padding: 65px 20px;
@@ -85,6 +89,7 @@
       font-size: 18px;
     }
 
+    /* コンテンツ */
     main {
       max-width: 1200px;
       margin: 35px auto;
@@ -117,6 +122,7 @@
       padding: 15px 22px;
     }
 
+    /* お知らせ */
     .news {
       list-style: none;
       padding: 0;
@@ -135,6 +141,7 @@
       font-size: 14px;
     }
 
+    /* プロフィール */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -152,12 +159,20 @@
       width: 35%;
     }
 
+    /* サイトについて */
     .about {
       background: #eaf2fc;
       padding: 20px;
       border-left: 6px solid #173d70;
     }
 
+    .about h2 {
+      background: transparent;
+      color: #173d70;
+      padding: 0;
+    }
+
+    /* フッター */
     footer {
       background: #142f59;
       color: white;
@@ -166,6 +181,7 @@
       font-size: 13px;
     }
 
+    /* スマートフォン対応 */
     @media (max-width: 700px) {
       header {
         flex-direction: column;
@@ -173,7 +189,8 @@
       }
 
       header img {
-        max-width: 100%;
+        width: 110px;
+        height: 110px;
       }
 
       .header-title {
@@ -200,8 +217,12 @@
 
 <body>
 
+<!-- ヘッダー -->
 <header>
-  <img src="images/icon.JPG" alt="アイコン" width="300">
+  <img src="images/combined_logo.jpg"
+       alt="サイトロゴ"
+       width="110"
+       height="110">
 
   <div class="header-title">
     <h1>レイプの神様</h1>
@@ -209,6 +230,7 @@
   </div>
 </header>
 
+<!-- メニュー -->
 <nav>
   <a href="#home">ホーム</a>
   <a href="#news">お知らせ</a>
@@ -216,6 +238,7 @@
   <a href="#about">当サイトについて</a>
 </nav>
 
+<!-- トップ -->
 <div class="hero" id="home">
   <h2>レイプの神様</h2>
   <p>— この世界に、少しの面白さを —</p>
@@ -225,6 +248,7 @@
 
   <div class="contents">
 
+    <!-- お知らせ -->
     <section id="news">
       <h2>最新のお知らせ</h2>
 
@@ -234,18 +258,22 @@
             <span class="date">2026.07.15</span>
             ホームページの作成
           </li>
+
           <li>
             <span class="date">未定</span>
             バイト先の後輩に振られた
           </li>
+
           <li>
             <span class="date">未定</span>
             恋する顔はとても綺麗で残酷だった
           </li>
+
           <li>
             <span class="date">未定</span>
             もうどうでもよくなってきたぜ◎
           </li>
+
           <li>
             <span class="date">現在</span>
             高校を休学中
@@ -254,6 +282,7 @@
       </div>
     </section>
 
+    <!-- プロフィール -->
     <section id="profile">
       <h2>一般情報</h2>
 
@@ -262,14 +291,17 @@
           <th>所在地</th>
           <td>神奈川県横浜市</td>
         </tr>
+
         <tr>
           <th>生誕</th>
-          <td>非公開</td>
+          <td>5月12日</td>
         </tr>
+
         <tr>
           <th>座右の銘</th>
           <td>一石二鳥</td>
         </tr>
+
         <tr>
           <th>使用言語</th>
           <td>HTML / CSS / JavaScript</td>
@@ -279,22 +311,31 @@
 
   </div>
 
+  <!-- サイトについて -->
   <section id="about">
     <div class="section-body about">
       <h2>当サイトについて</h2>
+
       <p>
         このサイトは、レイプの神様が運営する個人ホームページです。
         日々の出来事や好きなものについて発信していきます。
+      </p>
+
+      <p>
+        ※当サイトは行政機関・公共団体とは関係ありません。
       </p>
     </div>
   </section>
 
 </main>
 
+<!-- フッター -->
 <footer>
   <p>レイプの神様 | Official Personal Website</p>
   <p>© 2026 Personal Website. All Rights Reserved.</p>
+  <p>本サイトは個人運営です。</p>
 </footer>
 
 </body>
 </html>
+
